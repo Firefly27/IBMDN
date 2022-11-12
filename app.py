@@ -15,13 +15,13 @@ global graph
 graph=tf.compat.v1.get_default_graph()
 app=Flask(__name__)
 
-json_path=r"final_model\\final_model.json"
+json_path=r"./final_model/final_model.json"
 json_file=open(json_path,'r')
 loaded_model_json=json_file.read()
 json_file.close()
 
 
-h5_path=r"final_model\\final_model.h5"
+h5_path=r"./final_model/final_model.h5"
 loaded_model=model_from_json(loaded_model_json)
 loaded_model.load_weights(h5_path)
 print('Model loaded.Check http://127.0.0.1:5000/')
