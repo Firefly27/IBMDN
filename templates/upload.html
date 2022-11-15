@@ -70,15 +70,21 @@ type="submit"
     class=" w-full text-white bg-gray-500 hover:bg-gray-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-5 my-5  focus:outline-none ">Predict Specimen</button>
 </div>
 
-<div class="lg:flex flex-col mx-auto p-5">
+<div class="lg:flex flex-col mx-auto p-5 ">
+
+    <p >{{error}}</p>
+
 
     {% if uploaded_image  is defined %}
-    <img src="{{uploaded_image}}" class="">
+    <img src="{{uploaded_image}}" class="w-full h-full">
     {% endif %}
 
-    <p>
-{{prediction_text}}
+        {% if prediction_text is defined %}
+    <p class="text-2xl font-medium p-5" >
+ 
+    {{prediction_text["Species"]}}
 </p>
+        {% endif %}
 </div>
 </div>
 

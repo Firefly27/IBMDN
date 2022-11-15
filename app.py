@@ -29,10 +29,18 @@ def upload():
         return render_template('upload.html')
 
     if request.method=='POST':
+
         f=request.files['image']
+
+
         basepath=os.path.dirname(__file__)
         file_path=os.path.join(basepath,'static/uploads',secure_filename(f.filename))
         image_file=os.path.join("static/uploads",secure_filename(f.filename))
+
+        if os.path.isdir(file_path):
+            return render_template('upload.html',error="Please upload an image file")
+
+
         f.save(file_path)
         img=load_img(file_path,target_size=(256,256))
         x=img_to_array(img)
@@ -49,16 +57,16 @@ def upload():
             loaded_model.load_weights(h5_path)
             print('Model loaded.Check http://127.0.0.1:5000/')
 
-            preds = np.argmax(loaded_model.predict(x), axis=-1)
-            found={
-                0: { "Type": "Bird", "Species": "Great Indian Bustard Bird"},
-1: {"Type": "Bird", "Species": "Spoon Billed Sandpiper Bird"},
-2: {"Type": "Flower", "Species": "Corpse Flower"},
-3: {"Type": "Flower", "Species": "Lady Slipper Orchid Flower"},
-4: {"Type": "Mammal", "Species": "Pangolin Mammal"},
-5: {"Type": "Mammal", "Species": "Senenca White Deer Mammal"},
-            }
-            text=found[preds[0]]
+            preds = np.argmax(loaded_model.predict(x))
+            found=[
+              { "Type": "Bird", "Species": "Great Indian Bustard Bird"},
+{"Type": "Bird", "Species": "Spoon Billed Sandpiper Bird"},
+ {"Type": "Flower", "Species": "Corpse Flower"},
+ {"Type": "Flower", "Species": "Lady Slipper Orchid Flower"},
+ {"Type": "Mammal", "Species": "Pangolin Mammal"},
+{"Type": "Mammal", "Species": "Senenca White Deer Mammal"},
+            ]
+            text=found[preds]
             return render_template('upload.html',prediction_text=text,uploaded_image=image_file)
 
 
