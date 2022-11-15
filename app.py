@@ -31,7 +31,8 @@ def upload():
     if request.method=='POST':
         f=request.files['image']
         basepath=os.path.dirname(__file__)
-        file_path=os.path.join(basepath,'uploads',secure_filename(f.filename))
+        file_path=os.path.join(basepath,'static/uploads',secure_filename(f.filename))
+        image_file=os.path.join("static/uploads",secure_filename(f.filename))
         f.save(file_path)
         img=load_img(file_path,target_size=(256,256))
         x=img_to_array(img)
@@ -52,15 +53,13 @@ def upload():
             found={
                 0: { "Type": "Bird", "Species": "Great Indian Bustard Bird"},
 1: {"Type": "Bird", "Species": "Spoon Billed Sandpiper Bird"},
-
 2: {"Type": "Flower", "Species": "Corpse Flower"},
 3: {"Type": "Flower", "Species": "Lady Slipper Orchid Flower"},
 4: {"Type": "Mammal", "Species": "Pangolin Mammal"},
 5: {"Type": "Mammal", "Species": "Senenca White Deer Mammal"},
             }
-            print("PREDICTIONS",preds[0])
             text=found[preds[0]]
-            return text
+            return render_template('upload.html',prediction_text=text,uploaded_image=image_file)
 
 
 if __name__=='__main__':
