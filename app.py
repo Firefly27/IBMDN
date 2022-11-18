@@ -8,6 +8,7 @@ from keras.models import model_from_json
 from werkzeug.utils import secure_filename
 from tensorflow.keras.utils import load_img,img_to_array
 from keras.models import load_model
+import json
 
 import secrets
 from flask import Flask, flash, render_template, request, redirect, url_for
@@ -59,6 +60,8 @@ app.config["UPLOADED_PHOTOS_DEST"] = ROOT_DIR+"/static/uploads/"
 app.config["SECRET_KEY"] = str(secrets.SystemRandom().getrandbits(128))
 configure_uploads(app, photos)
 
+
+
 @app.route('/', methods=['GET'])
 
 def index():
@@ -90,7 +93,14 @@ def upload():
             preds =  np.argmax(loaded_model.predict(inp),axis=1)
 
         text = predictions[preds[0]]
-        return render_template('upload.html',prediction_text=text,uploaded_image=image_file)
+
+        with open('predictions.json', 'r') as f:
+            data = json.load(f)
+            description =data[str(preds[0])].get('description')
+            species =predictions[preds[0]]
+            species_type =data[str(preds[0])].get('type')
+
+        return render_template('upload.html',uploaded_image=image_file,description=description,species=species,type=species_type)
 
 
 

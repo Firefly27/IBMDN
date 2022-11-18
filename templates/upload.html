@@ -38,9 +38,10 @@
         
     </div>
 
-<form method="post" action="/predict" enctype="multipart/form-data">
 
 <div class="lg:flex ">
+    <form method="post" action="/predict" enctype="multipart/form-data">
+
 <div class=" lg:flex flex-col px-4  lg:w-1/3  ">
  
 
@@ -48,7 +49,7 @@
 <input
     class=" w-full text-sm text-gray-900 rounded-lg cursor-pointer bg-gray-50  focus:outline-none "
     aria-describedby="file_input_help" id="file_input" type="file" name="image">
-<p class="mt-2 text-sm " id="file_input_help">SVG, PNG, JPG</p>
+<!-- <p class="mt-2 text-sm " id="file_input_help">SVG, PNG, JPG</p> -->
 
 
     <!-- <button 
@@ -69,27 +70,66 @@
 type="submit"
     class=" w-full text-white bg-gray-500 hover:bg-gray-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-5 my-5  focus:outline-none ">Predict Specimen</button>
 </div>
+</form>
 
-<div class="lg:flex flex-col mx-auto p-5 ">
+<div class="lg:flex flex-col whitespace-normal break-word mx-auto p-5 ">
 
     <p >{{error}}</p>
 
 
     {% if uploaded_image  is defined %}
-    <img src="{{ uploaded_image }}" class="w-full h-full">
+    <img src="{{ uploaded_image }}" class="">
     {% endif %}
 
-        {% if prediction_text is defined %}
-    <p class="text-2xl font-medium p-5" >
- 
-    {{prediction_text}}
-</p>
+        {% if species is defined %}
+                <p class="text-3xl font-medium p-5" >
+            
+                {{ species }}
+            </p>
         {% endif %}
+            {% if type is defined %}
+            <p class="text-xl py-2 px-5">
+            
+                {{ type }}
+            </p>
+            {% endif %}
+
+            {% if description is defined %}
+
+            <div class="p-5 ">
+            
+                {{ description }}
+            </div>
+       
+            <div class="flex space-x-5">
+                    <a href="https://twitter.com/intent/tweet?text= I just discovered this {{ species }} on my excursion! Use Digital Naturalist App!" target="_blank" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        
+                        <svg width="40" height="34" viewBox="0 0 40 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M35.9049 8.84015C35.9293 9.19278 35.9293 9.54541 35.9293 9.90129C35.9293 20.7451 27.6742 33.2513 12.5793 33.2513V33.2448C8.12025 33.2513 3.75381 31.974 0 29.5657C0.648385 29.6437 1.30002 29.6827 1.95328 29.6843C5.64859 29.6876 9.23827 28.4477 12.1454 26.1645C8.63376 26.0979 5.55434 23.8083 4.47857 20.4656C5.70871 20.7028 6.97623 20.6541 8.18363 20.3242C4.35507 19.5507 1.60065 16.1869 1.60065 12.2803C1.60065 12.2446 1.60065 12.2104 1.60065 12.1763C2.74142 12.8117 4.01869 13.1643 5.32521 13.2033C1.71928 10.7934 0.607759 5.99635 2.78529 2.24579C6.95186 7.37275 13.0993 10.4895 19.6986 10.8194C19.0372 7.96913 19.9407 4.98234 22.0727 2.97868C25.378 -0.128369 30.5765 0.0308836 33.6835 3.33456C35.5214 2.97218 37.283 2.29779 38.895 1.34228C38.2823 3.24193 37.0002 4.85558 35.2874 5.88097C36.9141 5.68922 38.5034 5.25371 40 4.58908C38.8982 6.2401 37.5105 7.67825 35.9049 8.84015Z"
+                                fill="white" />
+                        </svg>
+
+
+                       </a>
+                    <a href="whatsapp://send?text=I just discovered this {{ species }} on my excursion! Use Digital Naturalist App!" data-action="share/whatsapp/share">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M18.0755 0.580627C8.19522 0.580627 0.154452 8.32527 0.150968 17.8432C0.148645 20.887 0.975484 23.8575 2.54323 26.4739L0 35.4193L9.50284 33.019C12.1462 34.4017 15.0854 35.1229 18.0685 35.1209H18.0755C27.9557 35.1209 35.9965 27.3751 36 17.8571C36.0023 13.2468 34.1396 8.90708 30.7545 5.64501C27.3705 2.38179 22.8705 0.581789 18.0755 0.580627ZM18.0755 32.2049H18.0697C15.3964 32.2049 12.7742 31.5128 10.4865 30.2051L9.94065 29.8939L4.30374 31.3177L5.80877 26.0222L5.45458 25.4799C3.96686 23.2109 3.17489 20.5564 3.17613 17.8432C3.17961 9.93134 9.864 3.49663 18.0813 3.49663C22.0599 3.49779 25.8004 4.99237 28.6142 7.70398C31.428 10.4156 32.976 14.0214 32.9737 17.856C32.9702 25.7679 26.287 32.2049 18.0743 32.2049H18.0755ZM26.2475 21.4571C25.7992 21.2423 23.5974 20.1983 23.1863 20.0531C22.7764 19.9103 22.4779 19.836 22.1795 20.268C21.8822 20.7 21.0228 21.672 20.7627 21.9588C20.5003 22.2468 20.239 22.2817 19.7907 22.0668C19.3425 21.8508 17.899 21.3956 16.1895 19.9254C14.8575 18.7827 13.9587 17.3706 13.6974 16.9374C13.4361 16.5066 13.6695 16.2731 13.8937 16.0583C14.0946 15.8667 14.3419 15.5555 14.5649 15.3035C14.7879 15.0515 14.8622 14.8715 15.0132 14.5835C15.1618 14.2966 15.0875 14.0435 14.9748 13.8286C14.8622 13.6115 13.968 11.4886 13.5929 10.6258C13.2306 9.78501 12.8613 9.89766 12.5861 9.88372C12.3248 9.87211 12.0275 9.86863 11.7267 9.86863C11.4306 9.86863 10.944 9.97663 10.5329 10.4086C10.123 10.8406 8.96516 11.8835 8.96516 14.0063C8.96516 16.1303 10.5701 18.1811 10.7942 18.4691C11.0183 18.756 13.9529 23.1143 18.4459 24.984C19.5143 25.4264 20.3481 25.6924 20.9996 25.8921C22.0726 26.2208 23.0493 26.1731 23.8204 26.0628C24.6797 25.9386 26.4705 25.02 26.8421 24.0131C27.216 23.0063 27.216 22.1423 27.1045 21.9623C26.9954 21.7823 26.6957 21.6743 26.2475 21.4571V21.4571Z"
+                                fill="white" />
+                        </svg>
+                        
+                        </a>
+                        </div>
+            {% endif %}
+
+            
+
+
 </div>
 </div>
 
 
-</form>
 
 
 </section>

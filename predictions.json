@@ -1,0 +1,182 @@
+{
+    "0": {
+        "index": "0",
+        "type": "Mammal",
+        "species ": "Bear",
+        "description": "Bears are carnivoran mammals of the family Ursidae. They are classified as caniforms, or doglike carnivorans. Although only eight species of bears are extant, they are widespread, appearing in a wide variety of habitats throughout the Northern Hemisphere and partially in the Southern Hemisphere. Bears are found on the continents of North America, South America, Europe, and Asia. Common characteristics of modern bears include large bodies with stocky legs, long snouts, small rounded ears, shaggy hair, plantigrade paws with five nonretractile claws, and short tails."
+    },
+    "1": {
+        "index": "1",
+        "type": "Flower",
+        "species ": "Bluebell",
+        "description": "Hyacinthoides non-scripta (formerly Endymion non-scriptus or Scilla non-scripta) is a bulbous perennial plant, found in Atlantic areas from north-western Spain to the British Isles, and also frequently used as a garden plant. It is known in English as the common bluebell or simply bluebell, a name which is used in Scotland to refer to the harebell, Campanula rotundifolia. In spring, H. non-scripta produces a nodding, one-sided inflorescence of tubular, sweet-scented violet blue flowers, with strongly recurved tepals, and long, linear, basal leaves."
+    },
+    "2": {
+        "index": "2",
+        "type": "Flower",
+        "species ": "ColtsFoot",
+        "description": "Tussilago farfara, commonly known as coltsfoot, is a plant in the tribe Senecioneae in the family Asteraceae, native to Europe and parts of western and central Asia. The name \"tussilago\" is derived from the Latin tussis, meaning cough, and ago, meaning to cast or to act on. It has had uses in traditional medicine, but the discovery of toxic pyrrolizidine alkaloids in the plant has resulted in liver health concerns"
+    },
+    "3": {
+        "index": "3",
+        "type": "Flower",
+        "species ": "Corpse",
+        "description": "Amorphophallus titanum, the titan arum, is a flowering plant in the family Araceae. It has the largest unbranched inflorescence in the world. The inflorescence of the talipot palm, Corypha umbraculifera, is larger, but it is branched rather than unbranched. A. titanum is endemic to rainforests on the Indonesian island of Sumatra."
+    },
+    "4": {
+        "index": "4",
+        "type": "Mammal",
+        "species ": "Cow",
+        "description": "Cattle (Bos taurus) are large, domesticated, cloven-hooved, herbivores. They are a prominent modern member of the subfamily Bovinae and the most widespread species of the genus Bos. Adult females are referred to as cows and adult males are referred to as bulls."
+    },
+    "5": {
+        "index": "5",
+        "type": "Flower",
+        "species ": "Daisy",
+        "description": "Bellis perennis, the daisy, is a European species of the family Asteraceae, often considered the archetypal species of the name daisy. To distinguish this species from other plants known as daisies, it is sometimes qualified as common daisy, lawn daisy or English daisy."
+    },
+    "6": {
+        "index": "6",
+        "type": "Flower",
+        "species ": "Dandelion",
+        "description": "Taraxacum is a large genus of flowering plants in the family Asteraceae, which consists of species commonly known as dandelions. The scientific and hobby study of the genus is known as taraxacology. The genus is native to Eurasia and North America, but the two most commonplace species worldwide, T. officinale (the common dandelion) and T. erythrospermum (the red-seeded dandelion), were introduced from Europe into North America, where they now propagate as wildflowers. Both species are edible in their entirety. The common name dandelion is also given to specific members of the genus."
+    },
+    "7": {
+        "index": "7",
+        "type": "Bird",
+        "species ": "Duck",
+        "description": "Duck is the common name for numerous species of waterfowl in the family Anatidae. Ducks are generally smaller and shorter-necked than swans and geese, which are members of the same family. Divided among several subfamilies, they are a form taxon; they do not represent a monophyletic group (the group of all descendants of a single common ancestral species), since swans and geese are not considered ducks. Ducks are mostly aquatic birds, and may be found in both fresh water and sea water."
+    },
+    "8": {
+        "index": "8",
+        "type": "Bird",
+        "species ": "Eagle",
+        "description": "The Accipitridae is one of the three families within the order Accipitriformes, and is a family of small to large birds with strongly hooked bills and variable morphology based on diet. They feed on a range of prey items from insects to medium-sized mammals, with a number feeding on carrion and a few feeding on fruit. The Accipitridae have a cosmopolitan distribution, being found on all the world's continents (except Antarctica) and a number of oceanic island groups. Some species are migratory."
+    },
+    "9": {
+        "index": "9",
+        "type": "Mammal",
+        "species ": "Elephant",
+        "description": "Elephants are the largest existing land animals. Three living species are currently recognised: the African bush elephant, the African forest elephant, and the Asian elephant. They are the only surviving members of the family Elephantidae and the order Proboscidea. The order was formerly much more diverse during the Pleistocene, but most species became extinct during the Late Pleistocene epoch. Distinctive features of elephants include a long proboscis called a trunk, tusks, large ear flaps, pillar-like legs, and tough but sensitive skin. The trunk is used for breathing, bringing food and water to the mouth, and grasping objects. Tusks, which are derived from the incisor teeth, serve both as weapons and as tools for moving objects and digging. The large ear flaps assist in maintaining a constant body temperature as well as in communication. African elephants have larger ears and concave backs, whereas Asian elephants have smaller ears, and convex or level backs."
+    },
+    "10": {
+        "index": "10",
+        "type": "Bird",
+        "species ": "Flamingo",
+        "description": "Flamingos or flamingoes are a type of wading bird in the family Phoenicopteridae, which is the only extant family in the order Phoenicopteriformes. There are four flamingo species distributed throughout the Americas (including the Caribbean), and two species native to Afro-Eurasia."
+    },
+    "11": {
+        "index": "11",
+        "type": "Mammal",
+        "species ": "Fox",
+        "description": "Foxes are small to medium-sized, omnivorous mammals belonging to several genera of the family Canidae. They have a flattened skull, upright triangular ears, a pointed, slightly upturned snout, and a long bushy tail (or brush)."
+    },
+    "12": {
+        "index": "12",
+        "type": "Bird",
+        "species ": "Great Indian Bustard",
+        "description": "The great Indian bustard (Ardeotis nigriceps) or Indian bustard, is a bustard found on the Indian subcontinent. A large bird with a horizontal body and long bare legs, giving it an ostrich like appearance, this bird is among the heaviest of the flying birds. Once common on the dry plains of the Indian subcontinent, as few as 150 individuals were estimated to survive in 2018 (reduced from an estimated 250 individuals in 2011) and the species is critically endangered by hunting and loss of its habitat, which consists of large expanses of dry grassland and scrub. These birds are often found associated in the same habitat as blackbuck. It is protected under Wildlife Protection Act 1972 of India."
+    },
+    "13": {
+        "index": "13",
+        "type": "Bird",
+        "species ": "Hornbill",
+        "description": "Hornbills (Bucerotidae) are a family of bird found in tropical and subtropical Africa, Asia and Melanesia. They are characterized by a long, down-curved bill which is frequently brightly coloured and sometimes has a casque on the upper mandible. Both the common English and the scientific name of the family refer to the shape of the bill, \"buceros\" being \"cow horn\" in Greek. Hornbills have a two-lobed kidney. They are the only birds in which the first and second neck vertebrae (the atlas and axis respectively) are fused together; this probably provides a more stable platform for carrying the bill. The family is omnivorous, feeding on fruit and small animals. They are monogamous breeders nesting in natural cavities in trees and sometimes cliffs. A number of mainly insular species of hornbill with small ranges are threatened with extinction, namely in Southeast Asia."
+    },
+    "14": {
+        "index": "14",
+        "type": "Mammal",
+        "species ": "Horse",
+        "description": "The horse (Equus ferus caballus) is a domesticated, one-toed, hoofed mammal. It belongs to the taxonomic family Equidae and is one of two extant subspecies of Equus ferus. The horse has evolved over the past 45 to 55 million years from a small multi-toed creature, Eohippus, into the large, single-toed animal of today. Humans began domesticating horses around 4000 BC, and their domestication is believed to have been widespread by 3000 BC. Horses in the subspecies caballus are domesticated, although some domesticated populations live in the wild as feral horses. These feral populations are not true wild horses, as this term is used to describe horses that have never been domesticated. There is an extensive, specialized vocabulary used to describe equine-related concepts, covering everything from anatomy to life stages, size, colors, markings, breeds, locomotion and behavior."
+    },
+    "15": {
+        "index": "15",
+        "type": "Bird",
+        "species ": "Hummingbird",
+        "description": "Hummingbirds are birds native to the Americas and comprise the biological family Trochilidae. With about 361 species and 113 genera, they occur from Alaska to Tierra del Fuego, but the vast majority of the species are found in the tropics around the equator.Hummingbirds split from their sister group, the swifts and treeswifts, around 42 million years ago. The common ancestor of extant hummingbirds is estimated to have lived 22 million years ago in South America. They are known as hummingbirds because of the humming sound created by their beating wings, which flap at high frequencies audible to humans. They hover in mid-air at rapid wing-flapping rates, which vary from around 12 beats per second in the largest species to around 80 per second in small hummingbirds."
+    },
+    "16": {
+        "index": "16",
+        "type": "Flower",
+        "species ": "Lady Slipper Orchid",
+        "description": "Cypripedioideae is a subfamily of orchids commonly known as lady's slipper orchids, lady slipper orchids or slipper orchids. Cypripedioideae includes the genera Cypripedium, Mexipedium, Paphiopedilum, Phragmipedium and Selenipedium. They are characterised by the slipper-shaped pouches (modified labella) of the flowers – the pouch traps insects so they are forced to climb up past the staminode, behind which they collect or deposit pollinia, thus fertilizing the flower. There are approximately 165 species in the subfamily."
+    },
+    "17": {
+        "index": "17",
+        "type": "Mammal",
+        "species ": "Leopard",
+        "description": "The leopard (Panthera pardus) is one of the five extant species in the genus Panthera, a member of the cat family, Felidae. It occurs in a wide range in sub-Saharan Africa, in some parts of Western and Central Asia, Southern Russia, and on the Indian subcontinent to Southeast and East Asia. It is listed as Vulnerable on the IUCN Red List because leopard populations are threatened by habitat loss and fragmentation, and are declining in large parts of the global range. The leopard is considered locally extinct in Hong Kong, Singapore, South Korea, Jordan, Morocco, Togo, the United Arab Emirates, Uzbekistan, Lebanon, Mauritania, Kuwait, Syria, Libya, Tunisia and most likely in North Korea, Gambia, Laos, Lesotho, Tajikistan, Vietnam and Israel. Contemporary records suggest that the leopard occurs in only 25% of its historical global range"
+    },
+    "18": {
+        "index": "18",
+        "type": "Bird",
+        "species ": "Owl",
+        "description": "Owls are birds from the order Strigiformes, which includes over 200 species of mostly solitary and nocturnal birds of prey typified by an upright stance, a large, broad head, binocular vision, binaural hearing, sharp talons, and feathers adapted for silent flight. Exceptions include the diurnal northern hawk-owl and the gregarious burrowing owl."
+    },
+    "19": {
+        "index": "19",
+        "type": "Mammal",
+        "species ": "Panda",
+        "description": "The giant panda (Ailuropoda melanoleuca), also known as the panda bear (or simply the panda), is a bear species endemic to China. It is characterised by its bold black-and-white coat and rotund body. The name \"giant panda\" is sometimes used to distinguish it from the red panda, a neighboring musteloid. Though it belongs to the order Carnivora, the giant panda is a folivore, with bamboo shoots and leaves making up more than 99% of its diet. Giant pandas in the wild occasionally eat other grasses, wild tubers, or even meat in the form of birds, rodents, or carrion. In captivity, they may receive honey, eggs, fish, yams, shrub leaves, oranges, or bananas along with specially prepared food."
+    },
+    "20": {
+        "index": "20",
+        "type": "Mammal",
+        "species ": "Pangolin",
+        "description": "Pangolins, sometimes known as scaly anteaters, are mammals of the order Pholidota. The one extant family, the Manidae, has three genera: Manis, Phataginus, and Smutsia. Manis comprises the four species found in Asia, while Phataginus and Smutsia include two species each, all found in sub-Saharan Africa. These species range in size from 30 to 100 cm (12 to 39 in). A number of extinct pangolin species are also known."
+    },
+    "21": {
+        "index": "21",
+        "type": "Bird",
+        "species ": "Parrot",
+        "description": "Parrots, also known as psittacines, are birds of the roughly 398 species in 92 genera comprising the order Psittaciformes, found mostly in tropical and subtropical regions. The order is subdivided into three superfamilies: the Psittacoidea (\"true\" parrots), the Cacatuoidea (cockatoos), and the Strigopoidea (New Zealand parrots). One-third of all parrot species are threatened by extinction, with higher aggregate extinction risk (IUCN Red List Index) than any other comparable bird group. Parrots have a generally pantropical distribution with several species inhabiting temperate regions in the Southern Hemisphere, as well. The greatest diversity of parrots is in South America and Australasia."
+    },
+    "22": {
+        "index": "22",
+        "type": "Bird",
+        "species ": "Pigeon",
+        "description": "The domestic pigeon (Columba livia domestica or Columba livia forma domestica) is a pigeon subspecies that was derived from the rock dove (also called the rock pigeon). The rock pigeon is the world's oldest domesticated bird. Mesopotamian cuneiform tablets mention the domestication of pigeons more than 5,000 years ago, as do Egyptian hieroglyphics. Research suggests that domestication of pigeons occurred as early as 10,000 years ago."
+    },
+    "23": {
+        "index": "23",
+        "type": "Mammal",
+        "species ": "Rat",
+        "description": "Rats are various medium-sized, long-tailed rodents. Species of rats are found throughout the order Rodentia, but stereotypical rats are found in the genus Rattus. Other rat genera include Neotoma (pack rats), Bandicota (bandicoot rats) and Dipodomys (kangaroo rats)."
+    },
+    "24": {
+        "index": "24",
+        "type": "Flower",
+        "species ": "Rose",
+        "description": "A rose is either a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears. There are over three hundred species and tens of thousands of cultivars.They form a group of plants that can be erect shrubs, climbing, or trailing, with stems that are often armed with sharp prickles."
+    },
+    "25": {
+        "index": "25",
+        "type": "Mammal",
+        "species ": "Seneca White Deer",
+        "description": "The Seneca white deer are a rare herd of deer living within the confines of the former Seneca Army Depot in Seneca County, New York. These deer are not albino, but instead have leucism, which is an abnormal genetic condition that carries a set of recessive genes for all-white coats. However, there is still not a lot of evidence as to what caused leucism in the white-tailed deer, especially for this herd. However, researchers have noticed that because of the isolation, it causes high levels of inbreeding. With inbreeding, it leaves recessive alleles of the white-tailed population to be expressed."
+    },
+    "26": {
+        "index": "26",
+        "type": "Bird",
+        "species ": "Spoon Billed Sandpiper",
+        "description": "The spoon-billed sandpiper (Calidris pygmaea) is a small wader which breeds on the coasts of the Bering Sea and winters in Southeast Asia. This species is highly threatened, and it is said that since the 1970s the breeding population has decreased significantly. By 2000, the estimated breeding population of the species was 350."
+    },
+    "27": {
+        "index": "27",
+        "type": "Flower",
+        "species ": "Sunflower",
+        "description": "Helianthus  is a genus comprising about 70 species of annual and perennial flowering plants in the daisy family Asteraceae commonly known as sunflowers. Except for three South American species, the species of Helianthus are native to North America and Central America. The best-known species is the common sunflower (Helianthus annuus), whose round flower heads in combination with the ligules look like the Sun. This and other species, notably Jerusalem artichoke (H. tuberosus), are cultivated in temperate regions and some tropical regions, as food crops for humans, cattle, and poultry, and as ornamental plants. The species H. annuus typically grows during the summer and into early fall, with the peak growth season being mid-summer."
+    },
+    "28": {
+        "index": "28",
+        "type": "Flower",
+        "species ": "Tulip",
+        "description": "Tulips (Tulipa) are a genus of spring-blooming perennial herbaceous bulbiferous geophytes (having bulbs as storage organs). The flowers are usually large, showy and brightly coloured, generally red, pink, yellow, or white (usually in warm colours). They often have a different coloured blotch at the base of the tepals (petals and sepals, collectively), internally. Because of a degree of variability within the populations, and a long history of cultivation, classification has been complex and controversial. The tulip is a member of the lily family, Liliaceae, along with 14 other genera, where it is most closely related to Amana, Erythronium and Gagea in the tribe Lilieae."
+    },
+    "29": {
+        "index": "29",
+        "type": "Flower",
+        "species ": "Windflower",
+        "description": "Anemone is a genus of flowering plants in the buttercup family Ranunculaceae. Plants of the genus are commonly called windflowers. They are native to the temperate and subtropical regions of all continents except Australia, New Zealand and Antarctica. The genus is closely related to several other genera including Anemonoides, Anemonastrum, Hepatica, and Pulsatilla. Some botanists include these genera within Anemone"
+    }
+}
