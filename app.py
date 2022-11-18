@@ -1,74 +1,99 @@
 from __future__ import division, print_function
 import os
 import numpy as np
-import json
-from keras.preprocessing import image
-from keras.models import load_model
 import tensorflow as tf
-from flask import Flask,request,render_template
-from werkzeug.utils import secure_filename
-from tensorflow.keras.models import Sequential
+from flask import Flask, redirect, render_template, request
+from keras.applications.inception_v3 import preprocess_input
 from keras.models import model_from_json
+from werkzeug.utils import secure_filename
 from tensorflow.keras.utils import load_img,img_to_array
+from keras.models import load_model
+
+import secrets
+from flask import Flask, flash, render_template, request, redirect, url_for
+from flask_uploads import IMAGES, UploadSet, configure_uploads
+
+ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), '..'))
+print(ROOT_DIR)
 
 global graph
 graph=tf.compat.v1.get_default_graph()
-app=Flask(__name__)
 
 
+predictions=[
+                'Bear Mammal',
+ 'Bluebell Flower',
+ 'ColtsFoot Flower',
+ 'Corpse Flower',
+ 'Cow Mammal',
+ 'Daisy Flower',
+ 'Dandelion Flower',
+ 'Duck Bird',
+ 'Eagle Bird',
+ 'Elephant Mammal',
+ 'Flamingo Bird',
+ 'Fox Mammal',
+ 'Great Indian Bustard Bird',
+ 'Hornbill Bird',
+ 'Horse Mammal',
+ 'Hummingbird Bird',
+ 'Lady Slipper Orchid Flower',
+ 'Leopard Mammal',
+ 'Owl Bird',
+ 'Panda Mammal',
+ 'Pangolin Mammal',
+ 'Parrot Bird',
+ 'Pigeon Bird',
+ 'Rat Mammal',
+ 'Rose Flower',
+ 'Senenca White Deer Mammal',
+ 'Spoon Billed Sandpiper Bird',
+ 'Sunflower Flower',
+ 'Tulip Flower',
+ 'Windflower Flower'
+            ]
 
-@app.route('/')
+app = Flask(__name__)
+photos = UploadSet("photos", IMAGES)
+app.config["UPLOADED_PHOTOS_DEST"] = ROOT_DIR+"/static/uploads/"
+app.config["SECRET_KEY"] = str(secrets.SystemRandom().getrandbits(128))
+configure_uploads(app, photos)
+
+@app.route('/', methods=['GET'])
+
 def index():
-    return render_template('index.html')
+    return render_template("index.html")
 
+@app.route('/predict', methods=['GET', 'POST'])
 
-
-@app.route('/predict',methods=['GET','POST'])
 def upload():
+
     if request.method=='GET':
         return render_template('upload.html')
 
-    if request.method=='POST':
 
+    if request.method == 'POST':
         f=request.files['image']
-
-
         basepath=os.path.dirname(__file__)
         file_path=os.path.join(basepath,'static/uploads',secure_filename(f.filename))
         image_file=os.path.join("static/uploads",secure_filename(f.filename))
-
         if os.path.isdir(file_path):
-            return render_template('upload.html',error="Please upload an image file")
-
-
+             return render_template('upload.html',error="Please upload an image file")
         f.save(file_path)
-        img=load_img(file_path,target_size=(256,256))
+        img=load_img(file_path,target_size=(229,229))
         x=img_to_array(img)
-        x=np.expand_dims(x,axis=0)
+        x = preprocess_input(x)
+        inp = np.array([x])
+
         with graph.as_default():
-            json_path=r"./final_model/final_model.json"
-            json_file=open(json_path,'r')
-            loaded_model_json=json_file.read()
-            json_file.close()
+            loaded_model=load_model("final_model/final_model.h5")
+            preds =  np.argmax(loaded_model.predict(inp),axis=1)
 
+        text = predictions[preds[0]]
+        return render_template('upload.html',prediction_text=text,uploaded_image=image_file)
 
-            h5_path=r"./final_model/final_model.h5"
-            loaded_model=model_from_json(loaded_model_json)
-            loaded_model.load_weights(h5_path)
-            print('Model loaded.Check http://127.0.0.1:5000/')
-
-            preds = np.argmax(loaded_model.predict(x))
-            found=[
-              { "Type": "Bird", "Species": "Great Indian Bustard Bird"},
-{"Type": "Bird", "Species": "Spoon Billed Sandpiper Bird"},
- {"Type": "Flower", "Species": "Corpse Flower"},
- {"Type": "Flower", "Species": "Lady Slipper Orchid Flower"},
- {"Type": "Mammal", "Species": "Pangolin Mammal"},
-{"Type": "Mammal", "Species": "Senenca White Deer Mammal"},
-            ]
-            text=found[preds]
-            return render_template('upload.html',prediction_text=text,uploaded_image=image_file)
 
 
 if __name__=='__main__':
     app.run(debug=False)
+
