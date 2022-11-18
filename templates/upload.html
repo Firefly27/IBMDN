@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Naturalist</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+</head>
+
+<body class="">
+
+    <div class="containir bg-cover min-h-screen w-full flex justify-center items-center"
+        style="background-image: url('https://images.pexels.com/photos/1671324/pexels-photo-1671324.jpeg?cs=srgb&dl=pexels-francesco-ungaro-1671324.jpg&fm=jpg&_gl=1*i9kk1o*_ga*MjE1NzQ0MzY2LjE2Njg1MDA5MDE.*_ga_8JE65Q40S6*MTY2ODUwMDkwMS4xLjAuMTY2ODUwMDkwMS4wLjAuMA..');'">
+
+
+
+<section class=" text-white bg-black p-5 rounded-2xl bg-opacity-30 backdrop-filter backdrop-blur-lg mx-10">
+        <a href="/"> <svg class="w-6 h-6 " fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+        </a>
+    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+        <div class="mr-auto place-self-center lg:col-span-7">
+       
+            <h1
+                class=" max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+                Digital Naturalist</h1>
+            <p class="max-w-2xl mb-6 font-light  lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+               Upload any image from your device or click a picture of the flora or fauna you want to know more about right here!
+                </p>
+       
+       
+        </div>
+        
+    </div>
+
+<form method="post" action="/predict" enctype="multipart/form-data">
+
+<div class="lg:flex ">
+<div class=" lg:flex flex-col px-4  lg:w-1/3  ">
+ 
+
+<label class="font-medium mb-2 text-white" for="file_input">Upload Image</label>
+<input
+    class=" w-full text-sm text-gray-900 rounded-lg cursor-pointer bg-gray-50  focus:outline-none "
+    aria-describedby="file_input_help" id="file_input" type="file" name="image">
+<p class="mt-2 text-sm " id="file_input_help">SVG, PNG, JPG</p>
+
+
+    <button 
+        class=" w-full text-white bg-gray-500 hover:bg-gray-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-5 my-5  focus:outline-none ">
+
+        <span class="flex items-center justify-center">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z">
+            </path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+        </svg>
+            <span class="px-5">Capture Image</span>
+<input type="file" accept="image/*;capture=camera" class="hidden" >
+</button>
+
+<button 
+type="submit"
+    class=" w-full text-white bg-gray-500 hover:bg-gray-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-5 my-5  focus:outline-none ">Predict Specimen</button>
+</div>
+
+<div class="lg:flex flex-col mx-auto p-5 ">
+
+    <p >{{error}}</p>
+
+
+    {% if uploaded_image  is defined %}
+    <img src="{{uploaded_image}}" class="w-full h-full">
+    {% endif %}
+
+        {% if prediction_text is defined %}
+    <p class="text-2xl font-medium p-5" >
+ 
+    {{prediction_text["Species"]}}
+</p>
+        {% endif %}
+</div>
+</div>
+
+
+</form>
+
+
+</section>
+
+</div>
+
+
+
+</body>
+
+</html>
